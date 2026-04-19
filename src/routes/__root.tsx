@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { SceneBackground } from "@/components/three/scene-background";
+import { CursorEffects } from "@/components/cursor-effects";
 
 function NotFoundComponent() {
   return (
@@ -75,6 +76,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <div className="relative flex min-h-screen flex-col">
+      <CursorEffects />
       <SceneBackground />
       <SiteHeader />
       <main className="flex-1">

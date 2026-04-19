@@ -108,6 +108,13 @@
   }
 }
 
+/* ── Custom cursor: hide native cursor on non-touch ── */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
 @layer utilities {
   .text-gradient {
     background: var(--gradient-text);
