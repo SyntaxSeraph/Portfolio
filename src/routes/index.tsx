@@ -9,21 +9,6 @@ import { ProjectsSection } from "@/components/sections/projects-section";
 import { ContactSection } from "@/components/sections/contact-section";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Sohan Hazra — Tech Enthusiast & Full Stack Developer" },
-      {
-        name: "description",
-        content:
-          "Hi, I'm Sohan Hazra — a B.Tech CSE student at VIT Vellore building modern full-stack web experiences.",
-      },
-      { property: "og:title", content: "Sohan Hazra — Portfolio" },
-      {
-        property: "og:description",
-        content: "Tech Enthusiast | Problem Solver | Passionate about Coding.",
-      },
-    ],
-  }),
   component: HomePage,
 });
 
