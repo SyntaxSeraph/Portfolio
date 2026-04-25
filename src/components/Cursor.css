@@ -1,0 +1,73 @@
+/* Hide native cursor globally */
+*, *::before, *::after { cursor: none !important; }
+
+/* --- Dot --- */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 8px var(--accent), 0 0 16px rgba(0,245,212,0.5);
+  will-change: left, top;
+}
+.cursor-dot.hovered {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  box-shadow: 0 0 12px #fff;
+}
+.cursor-dot.clicked {
+  width: 4px;
+  height: 4px;
+  background: var(--accent3);
+  box-shadow: 0 0 14px var(--accent3);
+}
+
+/* --- Ring --- */
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0,245,212,0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s cubic-bezier(.16,1,.3,1),
+              height 0.25s cubic-bezier(.16,1,.3,1),
+              border-color 0.25s,
+              background 0.25s,
+              opacity 0.25s;
+  will-change: left, top;
+}
+.cursor-ring.hovered {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(2px);
+}
+.cursor-ring.clicked {
+  width: 28px;
+  height: 28px;
+  border-color: var(--accent3);
+  background: rgba(249,115,22,0.08);
+}
+
+/* --- Trail particles --- */
+.cursor-trail {
+  position: fixed;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+  transition: background 0.3s;
+  box-shadow: 0 0 6px rgba(0,245,212,0.4);
+}
